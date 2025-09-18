@@ -59,8 +59,12 @@ export default function Index() {
             <div className="relative">
               <div className="relative bg-card rounded-2xl p-8 shadow-xl">
                 <div className="text-center space-y-4">
-                  <div className="mx-auto w-32 h-32 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Icon name="QrCode" size={64} className="text-primary" />
+                  <div className="mx-auto w-64 h-48 rounded-xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/img/96edb288-94c8-4d96-b12f-bcbfb4cb3011.jpg" 
+                      alt="Памятник с QR-кодом и телефон с видео"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <p className="text-sm font-body text-muted-foreground">
                     Наведите камеру телефона на QR-код
@@ -78,16 +82,27 @@ export default function Index() {
 
       {/* Problem & Solution */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-heading font-bold text-foreground">
-              Фото хранит образ, но не передаёт{' '}
-              <span className="text-primary">живые эмоции</span>
-            </h2>
-            <p className="text-xl font-body text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Мы предлагаем решение: QR-код с персональной страницей памяти. 
-              Достаточно навести камеру — и оживёт воспоминание, полное тепла и любви.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-heading font-bold text-foreground">
+                Фото хранит образ, но не передаёт{' '}
+                <span className="text-primary">живые эмоции</span>
+              </h2>
+              <p className="text-xl font-body text-muted-foreground leading-relaxed">
+                Мы предлагаем решение: QR-код с персональной страницей памяти. 
+                Достаточно навести камеру — и оживёт воспоминание, полное тепла и любви.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/img/e94ae7bb-2b47-409d-acae-0d51c2bb09c3.jpg" 
+                  alt="Мирный мемориальный сад"
+                  className="w-full h-80 object-cover"
+                />
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -198,6 +213,13 @@ export default function Index() {
             <p className="text-xl font-body text-muted-foreground">
               Выберите подходящий план для сохранения памяти
             </p>
+            <div className="max-w-md mx-auto mb-8">
+              <img 
+                src="/img/cd24068e-e104-4a3b-b21c-6e269a936132.jpg" 
+                alt="Качественная QR-табличка на памятнике"
+                className="w-full h-48 object-cover rounded-xl shadow-lg"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -276,33 +298,44 @@ export default function Index() {
 
       {/* Emotional Block */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary/5 to-secondary/5">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-heading font-bold text-foreground">
-              Мы помним близких{' '}
-              <span className="text-primary">живыми</span>
-            </h2>
-            <p className="text-xl font-body text-muted-foreground leading-relaxed">
-              QR-код сохраняет не только изображение, но и частичку души: голос, улыбку, воспоминания. 
-              Ваши дети и внуки смогут услышать и увидеть дорогого человека, почувствовать его тепло 
-              и любовь даже спустя годы.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-heading font-bold text-foreground">
+                Мы помним близких{' '}
+                <span className="text-primary">живыми</span>
+              </h2>
+              <p className="text-xl font-body text-muted-foreground leading-relaxed">
+                QR-код сохраняет не только изображение, но и частичку души: голос, улыбку, воспоминания. 
+                Ваши дети и внуки смогут услышать и увидеть дорогого человека, почувствовать его тепло 
+                и любовь даже спустя годы.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/img/8001d540-804a-47dc-b4b9-802d1d95f494.jpg" 
+                  alt="Семейные воспоминания на телефоне"
+                  className="w-full h-80 object-cover"
+                />
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="space-y-4">
+            <div className="text-center space-y-4">
               <Icon name="Volume2" size={48} className="mx-auto text-primary" />
               <h3 className="text-lg font-heading font-semibold">Голос</h3>
               <p className="text-muted-foreground font-body">Услышьте знакомые интонации и любимые фразы</p>
             </div>
             
-            <div className="space-y-4">
+            <div className="text-center space-y-4">
               <Icon name="Smile" size={48} className="mx-auto text-primary" />
               <h3 className="text-lg font-heading font-semibold">Улыбка</h3>
               <p className="text-muted-foreground font-body">Увидьте живую мимику и естественные эмоции</p>
             </div>
             
-            <div className="space-y-4">
+            <div className="text-center space-y-4">
               <Icon name="Heart" size={48} className="mx-auto text-primary" />
               <h3 className="text-lg font-heading font-semibold">Воспоминания</h3>
               <p className="text-muted-foreground font-body">Сохраните важные моменты на века</p>
