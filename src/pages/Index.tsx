@@ -97,8 +97,8 @@ export default function Index() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/img/24bab1f5-cf09-4a93-92ed-0784a37a9ceb.jpg" 
-                  alt="Памятник с русским текстом"
+                  src="/img/bd2c8724-bfb8-42cd-a0ac-02ef9208170a.jpg" 
+                  alt="Памятник с фото и QR-кодом"
                   className="w-full h-80 object-cover"
                 />
               </div>
