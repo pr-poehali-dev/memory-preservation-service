@@ -40,7 +40,7 @@ export default function ProblemSolutionSection() {
               <Icon name="ArrowRight" size={32} className="text-secondary" />
             </div>
             <h3 className="text-lg font-heading font-semibold">Стало</h3>
-            <p className="text-muted-foreground font-body">QR-код открывает богатую страницу памяти</p>
+            <p className="text-muted-foreground font-body">QR-код открывает страницу памяти</p>
           </div>
           
           <div className="text-center space-y-4">
