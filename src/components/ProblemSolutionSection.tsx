@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 export default function ProblemSolutionSection() {
+  const [isScanning, setIsScanning] = useState(false);
+  
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -27,15 +30,39 @@ export default function ProblemSolutionSection() {
                   <div className="h-2 bg-stone-300 rounded mx-auto w-24"></div>
                 </div>
                 
-                <div className="mt-8 p-4 bg-white rounded-lg shadow-lg">
-                  <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center rounded">
+                <div 
+                  className="mt-8 p-4 bg-white rounded-lg shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl"
+                  onMouseEnter={() => setIsScanning(true)}
+                  onMouseLeave={() => setIsScanning(false)}
+                >
+                  <div className="relative w-20 h-20 mx-auto bg-black flex items-center justify-center rounded overflow-hidden">
                     <div className="grid grid-cols-3 gap-0.5">
                       {Array.from({length: 9}).map((_, i) => (
                         <div key={i} className={`w-1.5 h-1.5 ${Math.random() > 0.5 ? 'bg-white' : 'bg-black'}`}></div>
                       ))}
                     </div>
+                    
+                    {isScanning && (
+                      <>
+                        <div className="absolute inset-0 bg-primary/20 animate-pulse"></div>
+                        <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary animate-bounce"></div>
+                        <div className="absolute top-2 left-0 right-0 h-0.5 bg-primary animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                        <div className="absolute top-4 left-0 right-0 h-0.5 bg-primary animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                      </>
+                    )}
                   </div>
-                  <p className="text-xs text-stone-600 mt-2 font-body">Наведите камеру</p>
+                  
+                  <p className={`text-xs mt-2 font-body transition-colors duration-300 ${
+                    isScanning ? 'text-primary font-semibold' : 'text-stone-600'
+                  }`}>
+                    {isScanning ? '🔍 Сканирование...' : 'Наведите камеру'}
+                  </p>
+                  
+                  {isScanning && (
+                    <div className="mt-2 text-xs text-primary font-body animate-fade-in">
+                      ✨ Открывается страница памяти
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
