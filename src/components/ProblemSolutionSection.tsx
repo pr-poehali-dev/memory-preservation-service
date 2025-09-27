@@ -16,12 +16,28 @@ export default function ProblemSolutionSection() {
             </p>
           </div>
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/img/73cc5be8-4c83-42d3-8b04-338543e3a8eb.jpg" 
-                alt="Чистый памятник без надписей"
-                className="w-full h-80 object-cover"
-              />
+            <div className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-stone-200 to-stone-300 p-8">
+              <div className="space-y-6 text-center">
+                <div className="w-24 h-24 mx-auto bg-white rounded-lg shadow-lg flex items-center justify-center">
+                  <Icon name="User" size={48} className="text-stone-400" />
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="h-3 bg-stone-400 rounded mx-auto w-32"></div>
+                  <div className="h-2 bg-stone-300 rounded mx-auto w-24"></div>
+                </div>
+                
+                <div className="mt-8 p-4 bg-white rounded-lg shadow-lg">
+                  <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center rounded">
+                    <div className="grid grid-cols-3 gap-0.5">
+                      {Array.from({length: 9}).map((_, i) => (
+                        <div key={i} className={`w-1.5 h-1.5 ${Math.random() > 0.5 ? 'bg-white' : 'bg-black'}`}></div>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-xs text-stone-600 mt-2 font-body">Наведите камеру</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
