@@ -18,8 +18,8 @@ export default function ProblemSolutionSection() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/img/bd2c8724-bfb8-42cd-a0ac-02ef9208170a.jpg" 
-                alt="Памятник с фото и QR-кодом"
+                src="/img/73cc5be8-4c83-42d3-8b04-338543e3a8eb.jpg" 
+                alt="Чистый памятник без надписей"
                 className="w-full h-80 object-cover"
               />
             </div>
